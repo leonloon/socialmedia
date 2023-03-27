@@ -31,7 +31,6 @@ export const articleAction = {
 };
 
 function getLatestArticles({limit = 1, offset = 0}) {
-  console.log('getLatestArticle');
   return dispatch => {
     dispatch(request());
     axios
@@ -61,9 +60,6 @@ function getLatestArticles({limit = 1, offset = 0}) {
 }
 
 function getArticles({limit, offset}) {
-  console.log(
-    `getArticle: https://api.realworld.io/api/articles?limit=${limit}&offset=${offset}`,
-  );
   return dispatch => {
     dispatch(request());
     axios
